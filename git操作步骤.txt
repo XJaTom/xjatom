@@ -1,0 +1,45 @@
+https://gitee.com/sdjwj1118/ins1st.git
+
+1、安装GIT客户端
+2、克隆项目：
+	在git bash中输入命令：
+	> git clone https://gitee.com/sdjwj1118/ins1st.git
+	
+3、在eclipse中导入已存在maven项目：
+	需要先设置好maven的settings.xml中的阿里的镜像
+
+4、将现有项目上传到gitee中：（第1次上传项目）
+	> rm -fr .git
+	> git init
+	> git remote add origin https://gitee.com/kzwang_admin/xueshengguanlixitong.git
+	> git pull --rebase origin master
+	> git add .
+	> git commit -m '提交信息'
+	> git -f origin master
+
+
+5、项目上传到git之后，使用eclipse进行提交：	
+	git提交代码的过程：
+	1)、将代码提交到本地仓库
+	2)、本地仓库与远程服务器进行对比（哪些文件变化）
+	3)、将远程服务器代码拉取到本地仓库
+	4)、将本地仓库推送到远程服务器
+
+	或者使用命令：
+	1) git add .
+	2) git commit -m '提交信息'
+	3) git pull origin master
+	4) git push origin master
+
+
+5、maven的使用：
+	1) www.apache.org下载最新的maven，将bin目录加入到path变量
+	2) 配置settings.xml，增加阿里的镜像
+	3) 在eclipse中配置自己的maven
+	
+	4)打包：
+		> mvn install   #编译生成jar包，并安装到maven仓库中
+		> mvn clean package  #打成可运行的jar或war包
+
+
+https://gitee.com/kzwang_admin/xueshengguanlixitong.git
